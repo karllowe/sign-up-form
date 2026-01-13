@@ -146,6 +146,17 @@ h1 {
     width: 150px;
     height: 30px
 }
+.formBottomArea p {
+    font-size: 0.9rem;
+}
+h2 {
+    font-size: 1 rem;
+}
+
+label {
+    font-size: 0.7rem;
+}
+
 
 
 
