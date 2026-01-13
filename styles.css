@@ -80,12 +80,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
-    width: 100vw;
+    width: 500px;
     padding-top: 200px;
     padding-bottom: 5px;
     background-image:url("halie-west-25xggax4bSA-unsplash.jpg");
-    background-size: auto 100vh;
+    background-size: 100vh auto;
     background-repeat: no-repeat;
     background-position: -50px;
 
@@ -119,7 +118,8 @@ h1 {
     flex-direction: column;
     justify-content: start;
     background-color: #F9FAFB;
-    padding-top: 100px;;
+    padding-top: 100px;
+    flex: 1 1 0;
 }
 .topPara {
     margin-bottom: 30px;
@@ -139,7 +139,8 @@ h1 {
 .formRow{
     display: flex;
     flex-direction: start;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 10px;
     margin-right: 120px;
 }
 .inputGroup {
@@ -176,14 +177,23 @@ label {
 
 input {
     border: 1px solid #E5E7EB;
-    height: 24px
+    height: 24px;
+    border-radius: 3px;
+}
+input:focus {
+    border-color: blue;
+    outline: 0px;
+    box-shadow: var(--drop-shaddow);
 }
 input:invalid {
     border-color: red;
 }
-input:focus {
+input:focus:invalid {
     border-color: blue;
+    outline: 0px;
+    box-shadow: var(--drop-shaddow);
 }
+
 
 
 
