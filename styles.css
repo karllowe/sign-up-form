@@ -1,3 +1,60 @@
+/* css reset */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* my custom css */
 @font-face {
     font-family: 'Norse';
     src: url('./fonts/Norse-Bold.woff2') format('woff2'),
@@ -7,10 +64,58 @@
     font-display: swap;
 }
 
-h1 {
-    font-family: "Norse";
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:100vh;
 }
 
-img {
-    background-color: lightgray;
+.leftHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 100vw;
+    padding-top: 200px;
+    padding-bottom: 5px;
+    background-image:url("halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: -50px;
+
 }
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: lightgray;
+    justify-content: center;
+}
+#odinLogo {
+    height: 80px;
+
+}
+h1 {
+    font-family: "Norse";
+    color: white;
+    font-size: 3rem;
+}
+.leftHero p {
+    font-size: 0.8rem;
+    align-self: center;
+    color: white;
+}
+
+.rightMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formBottomArea{
+    flex:1 1 0;
+    background-color: aliceblue;
+}
+
+
+
