@@ -128,10 +128,24 @@ h1 {
 }
 
 .mainForm {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
     background-color: white;
-    box-shadow: 1.3px 2.6px 2.6px hsl(0deg 0% 0% / 0.45);
+    box-shadow: 1.3px 2.6px 5px hsl(0deg 0% 0% / 0.2);
     padding: 10px var(--left-padding) 30px var(--left-padding);
 }
+.formRow{
+    display: flex;
+    flex-direction: start;
+    justify-content: space-between;
+    margin-right: 120px;
+}
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
 .formBottomArea{
     margin-left: var(--left-padding);
     flex:1 1 0;
@@ -144,7 +158,8 @@ h1 {
     border: 0;
     font-size: 0.9rem;
     width: 150px;
-    height: 30px
+    height: 30px;
+    font-weight: bold;
 }
 .formBottomArea p {
     font-size: 0.9rem;
