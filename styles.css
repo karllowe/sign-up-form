@@ -17,6 +17,7 @@
 }
 :root {
     --left-padding: 30px;
+    --drop-shaddow: 1.3px 2.6px 5px hsl(0deg 0% 0% / 0.2);
 }
 
 
@@ -132,7 +133,7 @@ h1 {
     flex-direction: column;
     gap:10px;
     background-color: white;
-    box-shadow: 1.3px 2.6px 5px hsl(0deg 0% 0% / 0.2);
+    box-shadow: var(--drop-shaddow);
     padding: 10px var(--left-padding) 30px var(--left-padding);
 }
 .formRow{
@@ -160,6 +161,7 @@ h1 {
     width: 150px;
     height: 30px;
     font-weight: bold;
+    box-shadow: var(--drop-shaddow)
 }
 .formBottomArea p {
     font-size: 0.9rem;
@@ -170,6 +172,17 @@ h2 {
 
 label {
     font-size: 0.7rem;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    height: 24px
+}
+input:invalid {
+    border-color: red;
+}
+input:focus {
+    border-color: blue;
 }
 
 
